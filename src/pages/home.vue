@@ -35,7 +35,7 @@ export default {
 <style lang="less">
 @height: 300px;
 .container{
-  width: 600px;
+  width: 100%;
   height: @height;
   .wh_content{
     height: 100%;
