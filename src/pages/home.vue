@@ -2,7 +2,7 @@
   <div class="container">
     <Swiper v-if="slidesReal.length > 0" :autoPlay='true' :showIndicator='true' interval="2500" duration="500">
         <Slide @click="clickMe" v-for="(item,index) in slidesReal" :key="index">
-        	<img :src="item.src"/>
+        	<div class="image-panel" :style="{backgroundImage:'url(' + item.src + ')'}"></div>
         </Slide>
    </Swiper>
   </div>
@@ -33,14 +33,22 @@ export default {
 }
 </script>
 <style lang="less">
+@height: 300px;
 .container{
   width: 600px;
-  height: 300px;
+  height: @height;
   .wh_content{
     height: 100%;
     .wh_slide{
-      height: 100%;
+      height: @height
     }
+  }
+  .image-panel{
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   img{
     width: 600px;
