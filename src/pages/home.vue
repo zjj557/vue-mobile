@@ -33,7 +33,7 @@ export default {
 }
 </script>
 <style lang="less">
-@height: 300px;
+@height: 100px;
 .container{
   width: 100%;
   height: @height;
@@ -53,6 +53,12 @@ export default {
   img{
     width: 600px;
     height: 300px;
+  }
+  .wh_indicator_item{
+    background-color: #fff;
+    &.wh_show_bgcolor{
+      background-color: #FF7F00;
+    }
   }
 }
 </style>
