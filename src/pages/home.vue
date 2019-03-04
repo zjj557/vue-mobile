@@ -37,7 +37,6 @@ export default {
     const url = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid}&redirect_uri=${redirect_uri}&response_type=code&scope=${scope}&state=STATE#wechat_redirect`;
     console.error(url)
     window.location.href = url;
-
   }
 }
 </script>
