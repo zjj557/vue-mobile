@@ -27,8 +27,15 @@ export default {
   },
   methods: {
     clickMe() {
-      console.log(111)
+
     }
+  },
+  mounted() {
+    const appid = 'wxaa008b21255ab687';
+    const redirect_uri = 'https://zjj557.github.io/vue-mobile';
+    const scope = 'snsapi_userinfo';
+    const url = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid}&redirect_uri=${redirect_uri}&response_type=code&scope=${scope}&state=STATE#wechat_redirect`;
+    window.location.href = url;
   }
 }
 </script>
